@@ -4,6 +4,7 @@
   "projects": {
     "blog": "apps/blog",
     "blog-api": "libs/blog-api",
-    "blog-e2e": "apps/blog-e2e"
+    "blog-e2e": "apps/blog-e2e",
+    "dk": "libs/dk"
   }
 }

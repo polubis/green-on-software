@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@software/blog-api": ["libs/blog-api/src/index.ts"]
+      "@software/blog-api": ["libs/blog-api/src/index.ts"],
+      "@software/dk": ["libs/dk/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
