@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import fonts from './fonts.module.css';
+import { getThemeProp } from './theme';
 
 export const GlobalStyle = createGlobalStyle`
     ${fonts}
@@ -7,10 +8,18 @@ export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         padding: 0;
+        background: ${getThemeProp('background')};
+        color: ${getThemeProp('color')};
     }    
 
     * {
         box-sizing: border-box;
+    }
+
+    ul,
+    ol {
+        padding: 0;
+        margin: 0;
     }
 
     h1,
