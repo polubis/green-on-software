@@ -6,6 +6,7 @@
     "blog-api": "libs/blog-api",
     "blog-e2e": "apps/blog-e2e",
     "dk": "libs/dk",
-    "ui": "libs/ui"
+    "ui": "libs/ui",
+    "ui-e2e": "apps/ui-e2e"
   }
 }
