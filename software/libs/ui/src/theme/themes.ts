@@ -1,11 +1,8 @@
-export interface Theme {
-  color: string;
-  background: string;
-  primary: string;
-}
-
-export const DEFAULT_THEME: Theme = {
-  color: '#fff',
-  background: '#0a0a0a',
+export const DEFAULT_THEME = {
+  font: '#fff',
+  fontReversed: '#000',
+  background: '#000',
   primary: '#ff7878',
 };
+
+export type Theme = typeof DEFAULT_THEME;

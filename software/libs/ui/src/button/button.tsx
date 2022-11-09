@@ -12,6 +12,7 @@ const Primary = styled.button<ButtonProps>`
   cursor: pointer;
   border-radius: 4px;
   padding: 12px 18px;
+  height: 48px;
   font-size: 14px;
   font-family: 'Lexend-Bold';
 
@@ -19,16 +20,16 @@ const Primary = styled.button<ButtonProps>`
     outlined
       ? css`
           color: ${getThemeProp('primary')};
-          border: 1px solid ${getThemeProp('primary')};
+          border: 2px solid ${getThemeProp('primary')};
           background: transparent;
 
           &:hover {
             background: ${getThemeProp('primary')};
-            color: ${getThemeProp('color')};
+            color: ${getThemeProp('font')};
           }
         `
       : css`
-          color: ${getThemeProp('color')};
+          color: ${getThemeProp('fontReversed')};
           border: 1px solid transparent;
           background: ${getThemeProp('primary')};
         `}
