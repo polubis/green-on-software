@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { getThemeProp } from '../theme';
 
 const MAX_DEGREES = 100;
@@ -7,23 +7,17 @@ const [SMALL_MARKER, BIG_MARKER] = [3, 10];
 const Wrapper = styled.div`
   display: flex;
   flex-flow: column;
-  align-items: center;
   background: #2f2f2f;
   width: 26px;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
+  border-top-left-radius: 39px;
+  border-top-right-radius: 39px;
+  padding: 24px 0 0 4px;
 `;
 
-const Degree = styled.div<{ big: boolean }>`
+const Degree = styled.div`
   background: ${getThemeProp('font')};
   width: ${SMALL_MARKER}px;
   height: 1px;
-
-  ${({ big }) =>
-    big &&
-    css`
-      width: ${BIG_MARKER}px;
-    `}
 `;
 
 const Degrees = styled.div`
@@ -40,7 +34,12 @@ export const Thermometer = (props: any) => {
     <Wrapper>
       <Degrees>
         {Array.from({ length: MAX_DEGREES }).map((_, i) => (
-          <Degree key={i} big={i % 5 === 0} />
+          <Degree
+            key={i}
+            style={{
+              width: i % 5 === 0 ? `${BIG_MARKER}px` : `${SMALL_MARKER}px`,
+            }}
+          />
         ))}
       </Degrees>
     </Wrapper>
