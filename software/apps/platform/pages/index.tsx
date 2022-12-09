@@ -1,5 +1,5 @@
 export function Index() {
-  return <div className='from-slate-900'>Its me !</div>;
+  return <></>;
 }
 
 export default Index;
