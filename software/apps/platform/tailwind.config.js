@@ -24,6 +24,16 @@ module.exports = {
       spacing,
       padding: spacing,
       height: spacing,
+      colors: {
+        gray: {
+          100: '#ABA7A7',
+          200: '#D8D8D8',
+          300: '#E9E9E9',
+        },
+        white: {
+          100: '#ffffff',
+        },
+      },
     },
   },
   plugins: [],
