@@ -34,6 +34,7 @@ module.exports = {
           100: '#ffffff',
         },
       },
+      screens: {},
     },
   },
   plugins: [],
