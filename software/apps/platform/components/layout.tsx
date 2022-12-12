@@ -17,7 +17,11 @@ function Layout({ children }: LayoutProps) {
       </header>
       <div className="flex">
         {expanded && (
-          <aside className="bg-white-900 w-[300px] bg-white-100 shrink-0 py-5 px-6"></aside>
+          <aside className="bg-white-900 w-[300px] bg-white-100 shrink-0 relative">
+            <div className="sticky top-0 left-0 bottom-0 right-0 py-5 px-6">
+              a
+            </div>
+          </aside>
         )}
         <main className="w-[100%] py-10 px-7 bg-gray-300">{children}</main>
       </div>
