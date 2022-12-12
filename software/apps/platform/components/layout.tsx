@@ -6,6 +6,21 @@ interface LayoutProps {
   children: ReactNode;
 }
 
+const createLink = (title: string, path: string) =>
+  ({
+    title,
+    path,
+  } as const);
+
+const primaryLinks = [
+  createLink('Articles', '/articles'),
+  createLink('Waiting room', '/waiting-room'),
+  createLink('Courses', '/courses'),
+  createLink('Webinars', '/webinars'),
+];
+
+const secondaryLinks = [createLink('Sandbox', '/sandbox')];
+
 function Layout({ children }: LayoutProps) {
   const [expanded, setExpanded] = useState(true);
 
@@ -19,23 +34,30 @@ function Layout({ children }: LayoutProps) {
           <Logo />
           <span className="ml-3 subtitle-1 hidden md:block">GreenOn</span>
         </div>
-        <div className="flex">
-          <Link className="subtitle-2 text-black-100" href="/articles">
-            Articles
-          </Link>
-          <Link className="subtitle-2 text-black-100" href="/articles">
-            Waiting room
-          </Link>
-          <Link className="subtitle-2 text-black-100" href="/articles">
-            Courses
-          </Link>
-          <Link className="subtitle-2 text-black-100" href="/articles">
-            Webinars
-          </Link>
+        <div className="flex items-center mx-auto">
+          <div>
+            {primaryLinks.map((link) => (
+              <Link
+                key={link.title}
+                className="subtitle-2 text-black-100 first:ml-0 ml-6"
+                href={link.path}
+              >
+                {link.title}
+              </Link>
+            ))}
+          </div>
           <div className="h-[24px] w-[2px] bg-gray-300 mx-7" />
-          <Link className="subtitle-2 text-black-100" href="/articles">
-            Sandbox
-          </Link>
+          <div>
+            {secondaryLinks.map((link) => (
+              <Link
+                key={link.title}
+                className="subtitle-2 text-black-100 first:ml-0 ml-6"
+                href={link.path}
+              >
+                {link.title}
+              </Link>
+            ))}
+          </div>
         </div>
       </header>
       <div className="flex">
