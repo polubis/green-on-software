@@ -33,6 +33,9 @@ module.exports = {
         white: {
           100: '#ffffff',
         },
+        black: {
+          100: '#000000',
+        },
       },
       screens: {},
     },

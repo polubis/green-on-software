@@ -1,3 +1,27 @@
 @tailwind components;
 @tailwind base;
 @tailwind utilities;
+
+@layer utilities {
+  /* @@@ TYPOGRAPHY @@@ */
+  .headline-1 {
+    font-size: 98px;
+    letter-spacing: -1.5px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+  }
+
+  .subtitle-1 {
+    font-size: 16px;
+    letter-spacing: 0.15px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+  }
+
+  .subtitle-2 {
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+  }
+}
