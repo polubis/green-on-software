@@ -15,7 +15,7 @@ module.exports = {
   content: [
     join(
       __dirname,
-      '{src,pages,components}/**/*!(*.stories|*.spec).{ts,tsx,html}'
+      '{src,pages,components,design-system}/**/*!(*.stories|*.spec).{ts,tsx,html}'
     ),
     ...createGlobPatternsForDependencies(__dirname),
   ],
@@ -24,17 +24,22 @@ module.exports = {
       spacing,
       padding: spacing,
       height: spacing,
+      margin: spacing,
       colors: {
         gray: {
           100: '#ABA7A7',
           200: '#D8D8D8',
           300: '#E9E9E9',
         },
+        primary: {
+          100: '#FF7878',
+        },
         white: {
           100: '#ffffff',
         },
         black: {
           100: '#000000',
+          900: '#00000039',
         },
       },
       screens: {},

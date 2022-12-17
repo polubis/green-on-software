@@ -23,3 +23,10 @@
 ## Removing
 
 1. `npx nx g rm blog`
+
+## Working with libraries
+
+### Adding react lib with storybook
+
+1. `cd software`
+2. `npx nx g @nrwl/react:library ui`

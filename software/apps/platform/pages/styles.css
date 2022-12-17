@@ -24,4 +24,11 @@
     font-family: 'Rubik', sans-serif;
     font-weight: bold;
   }
+
+  .button-text {
+    font-size: 14px;
+    letter-spacing: 1.25px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bolder;
+  }
 }
